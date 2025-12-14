@@ -4,11 +4,10 @@ import joblib
 import tensorflow as tf
 
 # Load model and scaler
-model = tf.keras.models.load_model("neural_network_model")
+model = tf.keras.models.load_model("neural_network_model.keras")
 scaler = joblib.load("scaler.pkl")
 
 st.title("Energy Efficiency Prediction App")
-
 st.write("Predict Heating Load using building parameters")
 
 # User inputs
