@@ -3,10 +3,12 @@ import numpy as np
 import joblib
 import tensorflow as tf
 
+# Load model and scaler (Keras 3 compatible)
 model = tf.keras.models.load_model("neural_network_model.keras")
 scaler = joblib.load("scaler.pkl")
 
 st.title("Energy Efficiency Prediction App")
+st.write("Predict Heating Load using building parameters")
 
 relative_compactness = st.number_input("Relative Compactness", 0.6, 1.0, 0.8)
 surface_area = st.number_input("Surface Area", 400.0, 900.0, 500.0)
