@@ -28,3 +28,4 @@ input_scaled = scaler.transform(input_data)
 if st.button("Predict Heating Load"):
     prediction = model.predict(input_scaled)
     st.success(f"Predicted Heating Load: {prediction[0][0]:.2f}")
+    st.success(f"Predicted Cooling Load: {prediction[0][1]:.2f}")
